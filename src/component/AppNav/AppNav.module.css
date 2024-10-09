@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Sixtyfour+Convergence&display=swap");
+
+
+
+
+.AppNav a {
+  text-decoration: none;
+  color: var(--light-color);
+  font-size: 2.5rem;
+  transition: all 0.8s;
+}
+.AppNav a:hover{
+  font-size: 3rem;
+}
+.AppNav ul li a:active{
+  color: var(--main-font-color);
+}
+
+.AppNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 2rem;
+  background-color: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.5rem);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: "Edu AU VIC WA NT Guides", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.logo {
+  width: 8rem;
+  text-align: center;
+}
+.logo img {
+  width: 100%;
+}
+
+
+.AppNav ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+}
+
+.AppNav li a {
+  display: flex;
+  justify-content: space-between;
+}

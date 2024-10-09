@@ -1,0 +1,84 @@
+.container {
+  position: relative;
+  max-width: 25rem;
+  height: max-content;
+  margin: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem 3rem 0.2rem 0.2rem;
+  background-color: var(--main-font-color);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: all 0.8s;
+}
+
+.container:nth-child(even) {
+  background-color: var(--main-wood-color);
+}
+
+.task {
+  font-family: "Edu AU VIC WA NT Guides", cursive;
+  font-optical-sizing: auto;
+  width: 20%;
+  margin-bottom: 0.2rem;
+  text-align: center;
+  text-transform: capitalize;
+
+  color: var(--light-color);
+}
+.description {
+  width: 100%;
+  text-align: left;
+ 
+}
+.date {
+  text-align: left;
+  font-size: 1.3rem;
+  width: 50%;
+  margin: 1rem 0;
+  padding: 0.2rem;
+}
+.btnsContainer {
+  width: max-content;
+  padding: 0.5rem;
+  border: 0.2rem solid var(--light-color);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.GoToFinished {
+  padding: 1rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  color: var(--dark-color);
+  background-color: var(--main-font-color);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: none;
+  cursor:pointer;
+  transition: all 0.8s;
+}
+.GoToFinished:hover{
+  box-shadow: var(--main-font-color) 0px 5px 15px;
+}
+
+.finishedPopup{
+  position: absolute;
+  top: 10%;
+  right: 0;
+  font-size: 3rem;
+  text-align: center;
+  color: rgb(255,255,255,0.3);
+  transform: rotate(45deg);
+  animation: moveUp 2s infinite;
+  
+}
+@keyframes moveUp{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-2rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}

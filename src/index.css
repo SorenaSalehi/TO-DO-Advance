@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Sixtyfour+Convergence&display=swap");
+
+:root {
+  --main-font-color: #02a19e;
+  --main-wood-color: #d57e1f;
+  --light-color: #fff;
+  --dark-color: #2c2c2c;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+.btn {
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--dark-color);
+  background-color: var(--main-font-color);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+.btn:hover {
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  box-shadow: var(--main-font-color) 0px 5px 15px;
+}
+
+.taskBtn {
+  background-color: transparent;
+  border: none;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.taskBtn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btnCheck:hover {
+  color: greenyellow;
+}
+.btnDelete:hover {
+  color: red;
+}
+
+.spinnerBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  background: linear-gradient(var(--dark-color), var(--light-color));
+  background-position: center;
+  background-size: cover;
+}
