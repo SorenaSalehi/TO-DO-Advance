@@ -65,9 +65,10 @@
   .sidebarBtn {
     position: absolute;
     left: 4dvw;
+    top: 2dvh;
     border: none;
     padding: 3dvw;
-    background-color: transparent;
+    background-color: var(--dark-color);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 2rem;
     z-index: 5;
@@ -80,7 +81,7 @@
   }
   .logo {
     width: 15dvw;
-    margin-top: 5dvh;
+    margin-top: 15dvh;
   }
   .AppNav li a {
     margin-top: 5dvh;
