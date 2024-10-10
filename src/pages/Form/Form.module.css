@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* height: 100dvh; */
   align-items: center;
   margin: 5dvh 20dvw;
   border-radius: 1rem;
@@ -16,17 +15,17 @@
   backdrop-filter: blur(1rem);
 }
 .form .header {
-  font-size: 4rem;
+  font-size: 4dvw;
   text-align: center;
 }
 .form label {
-  font-size: 2rem;
-  letter-spacing: 1rem;
+  font-size: 2dvw;
+  letter-spacing: 1dvw;
   border-bottom: 0.2rem solid var(--light-color);
 }
 
 .form .task {
-  font-size: 3rem;
+  font-size: 3dvw;
   font-family: "Edu AU VIC WA NT Guides", cursive;
   font-optical-sizing: auto;
   word-spacing: 0.2rem;
@@ -46,7 +45,7 @@
 .form .desc {
   width: 30%;
   height: 10dvh;
-  font-size: 2rem;
+  font-size: 2dvw;
   font-family: "Edu AU VIC WA NT Guides", cursive;
   font-optical-sizing: auto;
   word-spacing: 0.2rem;
@@ -80,4 +79,5 @@
 .form button {
   width: 20%;
   margin: 1rem;
+  font-size: 2dvw;
 }

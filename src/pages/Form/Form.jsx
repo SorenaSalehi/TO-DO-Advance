@@ -53,7 +53,6 @@ export default function Form() {
           id="date"
           className={styles.date}
           required
-          
           value={date}
           onChange={(e) => setDate(e.target.value)}
         />

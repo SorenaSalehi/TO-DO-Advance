@@ -7,10 +7,10 @@ import DeleteTaskBtn from "../../component/DeleteTaskBtn/DeleteTaskBtn";
 
 export default function TaskItem({ task }) {
   const date = task.date.replaceAll("-", "/");
-
+  const finished =task.isFinished
   return (
     <div className={styles.container}>
-      <p className={task.isFinished && styles.finishedPopup}>Finished 🙂</p>
+      <p className={finished ? styles.finishedPopup : styles.hide}>Finished 🙂</p>
       <h1 className={styles.task}>{task.task}</h1>
       {task.description && <h1 className={styles.description}>{task.description}</h1>}
       <h1 className={styles.date}>{date}</h1>

@@ -11,8 +11,8 @@
   margin: 1dvh 10dvw;
   width: 80%;
   height: 80dvh;
-  /* padding: 1rem; */
   border-radius: 3rem;
+
   overflow: hidden;
 }
 .taskLiBg {
@@ -25,18 +25,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(0.1rem);
 
 }
 .tasks {
-
   display: flex;
   flex-direction: column;
-  /* background-image: url(/public/tasks-hd.jpg);
-  background-size: cover; */
   width: 100%;
-  min-height: 48rem;
-  padding: 3rem;
+  min-height: 48dvh;
+  padding: 3dvw;
   border-radius: 2rem;
   overflow: scroll;
 }
@@ -47,7 +43,7 @@
 
 .tasksNum {
   position: fixed;
-  font-size: 3rem;
+  font-size: 3dvw;
   color: var(--light-color);
   border-bottom: 0.2rem solid var(--light-color);
   width: 40%;
@@ -63,15 +59,21 @@
 }
 
 .startBtn {
-  margin-top: 12rem;
+  margin-top: 12dvh;
   width: 20%;
   font-family: "Edu AU VIC WA NT Guides", cursive;
-  font-size: 2rem;
+  font-size: 2dvw;
 }
 
 .tasksList {
   display: flex;
   flex-wrap: wrap;
   width: 70%;
-  margin-top: 12rem;
+  margin-top: 12dvh;
+}
+
+@media screen and (max-width:450px) {
+  .tasksList{
+    width: 100%;
+  }
 }

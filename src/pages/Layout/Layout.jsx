@@ -12,15 +12,24 @@ export default function Layout({ children }) {
 
   return (
     <div className={styles.layout}>
-      <img
-        className={styles.layoutBg}
-        src={isLoading ? "/main.low.jpg" : "/main.bg.jpg"}
-        alt="todo-background"
-        loading="lazy"
-        onLoad={handleLoading}
-      />
+      {/* //responsive bg */}
+      <picture>
+        <source
+          media="(max-width : 450px)"
+          srcSet="/vertical.webp"
+          alt="todo-background"
+          loading="lazy"
+        />
+        <img
+          className={styles.layoutBg}
+          src={isLoading ? "/main-low.webp" : "/main-bg.webp"}
+          alt="todo-background"
+          loading="lazy"
+          onLoad={handleLoading}
+        />
 
-      {children}
+        {children}
+      </picture>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 .container {
   position: relative;
-  max-width: 25rem;
+  max-width: 25dvw;
   height: max-content;
-  margin: 1.2rem;
-  padding: 1rem 2rem;
+  margin: 1.2dvh;
+  padding: 1dvh 2dvw;
   border-radius: 0.2rem 3rem 0.2rem 0.2rem;
   background-color: var(--main-font-color);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -16,38 +16,40 @@
 }
 
 .task {
+  font-size: 3dvw;
   font-family: "Edu AU VIC WA NT Guides", cursive;
   font-optical-sizing: auto;
   width: 20%;
   margin-bottom: 0.2rem;
   text-align: center;
   text-transform: capitalize;
-
   color: var(--light-color);
+  
 }
 .description {
   width: 100%;
   text-align: left;
- 
+ font-size: 2dvw;
 }
 .date {
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1.3dvw;
   width: 50%;
   margin: 1rem 0;
   padding: 0.2rem;
 }
 .btnsContainer {
   width: max-content;
-  padding: 0.5rem;
+  padding: 0.5dvw;
   border: 0.2rem solid var(--light-color);
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .GoToFinished {
-  padding: 1rem;
-  margin: 2rem 0;
+  font-size: 2dvw;
+  padding: 1dvw;
+  margin: 2dvh 0;
   border-radius: 1rem;
   color: var(--dark-color);
   background-color: var(--main-font-color);
@@ -64,12 +66,14 @@
   position: absolute;
   top: 10%;
   right: 0;
-  font-size: 3rem;
+  font-size: 3dvw;
   text-align: center;
   color: rgb(255,255,255,0.3);
   transform: rotate(45deg);
   animation: moveUp 2s infinite;
-  
+}
+.hide{
+  display: none;
 }
 @keyframes moveUp{
   0%{

@@ -17,13 +17,24 @@ export default function TasksFinished() {
     <div className={styles.finishedPage}>
       <AppNav />
       <div className={styles.finishedContainer}>
-        <img
-          className={styles.finishedBg}
-          src={isLoading ? '/tasks-finished-low.jpg': "/tasks-finished-hd.jpg"}
-          alt="task"
-          loading="lazy"
-          onLoad={handleLoading}
-        />
+        <picture>
+          <source
+            className={styles.finishedBg}
+            media="(max-width:450px)"
+            srcSet="/finished-vertical.webp"
+            alt="task-background"
+            loading="lazy"
+          />
+          <img
+            className={styles.finishedBg}
+            src={
+              isLoading ? "/tasks-finished-low.jpg" : "/tasks-finished-hd.webp"
+            }
+            alt="task"
+            loading="lazy"
+            onLoad={handleLoading}
+          />
+        </picture>
         <div className={styles.finished}>
           {finishedTasks.length !== 0 && (
             <h1 className={styles.finishedNum}>

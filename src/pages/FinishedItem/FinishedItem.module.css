@@ -1,8 +1,9 @@
 .container {
-    max-width: 25rem;
+    max-width: 25dvw;
+    width: max-content;
     height: max-content;
-    margin: 1.2rem;
-    padding: 1rem 2rem;
+    margin: 1.2dvw;
+    padding: 1dvh 2dvw;
     border-radius: 0.2rem 3rem 0.2rem 0.2rem;
     background-color: var(--main-font-color);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -15,19 +16,20 @@
   }
   
   .task {
+    font-size: 3dvw;
     font-family: "Edu AU VIC WA NT Guides", cursive;
     font-optical-sizing: auto;
     width: max-content;
     margin-bottom: 0.2rem;
     text-align: center;
     text-transform: capitalize;
-  
+    
     color: var(--light-color);
   }
  
   .date {
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 1.3dvw;
     margin: 1rem 0;
     padding: 0.2rem;
   }

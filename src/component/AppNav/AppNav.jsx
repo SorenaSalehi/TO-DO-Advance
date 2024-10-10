@@ -10,7 +10,7 @@ export default function AppNav() {
     <nav className={styles.AppNav}>
       <div className={styles.logo}>
         <NavLink to="/">
-          <img loading="lazy" alt="todo-logo" src="/public/logo.png"></img>
+          <img loading="lazy" alt="todo-logo" src="/logo.webp"></img>
         </NavLink>
       </div>
       <ul>
