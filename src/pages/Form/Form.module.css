@@ -7,12 +7,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5dvh 20dvw;
+  height: 50dvh;
+  margin: 5dvh 10dvw;
   border-radius: 1rem;
   color: var(--light-color);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: rgb(255, 255, 255, 0.1);
   backdrop-filter: blur(1rem);
+
 }
 .form .header {
   font-size: 4dvw;
@@ -41,6 +43,10 @@
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.task::placeholder{
+  font-size: 5dvw;
+  color: var(--main-font-color);
+}
 
 .form .desc {
   width: 30%;
@@ -53,9 +59,15 @@
   border: none;
   transition: all 0.5s;
 }
+
 .form .desc:focus {
   outline-color: var(--main-font-color);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.desc::placeholder{
+  font-size: 4dvw;
+  color: var(--main-font-color);
 }
 
 .form .desc::-webkit-scrollbar {
@@ -65,8 +77,8 @@
 .form .date {
   border-radius: 1rem;
   padding: 0.4rem;
-  width: 20%;
-  background-color: transparent;
+  /* width: 20%; */
+  background-color: var(--main-font-color);
   border: none;
   font-family: "Edu AU VIC WA NT Guides", cursive;
   font-optical-sizing: auto;
@@ -75,6 +87,7 @@
 .form .date:focus {
   outline-color: var(--main-font-color);
 }
+
 
 .form button {
   width: 20%;
