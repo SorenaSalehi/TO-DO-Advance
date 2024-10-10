@@ -43,7 +43,7 @@
   padding: 1dvw;
   border-radius: 1rem;
   backdrop-filter: blur(5rem);
-  z-index: 100;
+  z-index: 1;
 }
 
 .finishedNum span {
@@ -67,7 +67,20 @@
 }
 
 @media screen and (max-width: 450px) {
+  .finishedContainer{
+    position: absolute;
+    top: 10dvh;
+  }
+
   .finishedList {
     width: 100%;
+  }
+  .finishedNum{
+    font-size: 6dvw;
+    width: auto;
+  }
+  .startBtn{
+    width: 50%;
+    font-size: 6dvw;
   }
 }

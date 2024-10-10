@@ -1,18 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Sixtyfour+Convergence&display=swap");
 
-
-
-
 .AppNav a {
   text-decoration: none;
   color: var(--light-color);
   font-size: 2.5rem;
   transition: all 0.8s;
 }
-.AppNav a:hover{
+.AppNav a:hover {
   font-size: 3rem;
 }
-.AppNav ul li a:active{
+.AppNav ul li a:active {
   color: var(--main-font-color);
 }
 
@@ -32,13 +29,12 @@
 }
 
 .logo {
-  width: 8rem;
+  width: 8dvw;
   text-align: center;
 }
 .logo img {
   width: 100%;
 }
-
 
 .AppNav ul {
   display: flex;
@@ -49,4 +45,44 @@
 .AppNav li a {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 450px) {
+  .AppNav {
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    height: 100dvh;
+    left: 0;
+    transition: all 0.2s;
+    z-index: 4;
+  }
+  .hidden {
+    display: none;
+  }
+  .sidebarBtn {
+    position: absolute;
+    left: 4dvw;
+    border: none;
+    padding: 3dvw;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 2rem;
+    z-index: 5;
+  }
+  .sidebar {
+    color: var(--main-font-color);
+  }
+  .AppNav ul {
+    flex-direction: column;
+  }
+  .logo {
+    width: 15dvw;
+    margin-top: 5dvh;
+  }
+  .AppNav li a {
+    margin-top: 5dvh;
+  }
 }

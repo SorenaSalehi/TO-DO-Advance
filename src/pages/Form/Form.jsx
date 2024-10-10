@@ -34,7 +34,7 @@ export default function Form() {
           autoFocus
           type="text"
           id="task"
-          placeholder="Your task title ..."
+          placeholder="task title ..."
           className={styles.task}
           value={task}
           onChange={(e) => setTask(e.target.value)}

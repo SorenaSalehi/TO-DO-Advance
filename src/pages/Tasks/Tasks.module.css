@@ -50,7 +50,7 @@
   padding: 1rem;
   border-radius: 1rem;
   backdrop-filter: blur(8rem);
-  z-index: 100;
+  z-index: 1;
 }
 .tasksNum span {
   font-family: "Edu AU VIC WA NT Guides", cursive;
@@ -73,7 +73,20 @@
 }
 
 @media screen and (max-width:450px) {
+  .tasksContainer{
+    position: absolute;
+    top: 10dvh;
+  }
+
   .tasksList{
     width: 100%;
+  }
+  .tasksNum{
+    font-size: 6dvw;
+    width: auto;
+  }
+  .startBtn{
+    width: 50%;
+    font-size: 6dvw;
   }
 }

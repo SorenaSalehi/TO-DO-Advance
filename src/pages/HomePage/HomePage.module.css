@@ -23,3 +23,20 @@
   font-size: 2dvw;
   color: var(--main-font-color);
 }
+
+@media screen and (max-width:450px) {
+  .homePage h1{
+    font-size: 12dvw;
+    margin-top: 15dvh;
+
+  }
+  .homePage button {
+    font-size: 8dvw;
+  }
+  .homePage footer {
+    margin-top: auto;
+    margin-bottom: 5dvh;
+    font-size: 2dvw;
+    color: var(--main-font-color);
+  }
+}
