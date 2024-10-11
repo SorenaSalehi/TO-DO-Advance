@@ -2,7 +2,7 @@
 
 .AppNav a {
   text-decoration: none;
-  color: var(--light-color);
+  color: var(--main-font-color);
   font-size: 2.5rem;
   transition: all 0.8s;
 }
@@ -26,11 +26,22 @@
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+  z-index: 2;
+}
+
+
+.sidebarBtn {
+  display: none;
+}
+
+.AppNav span{
+  margin: 0 2dvw;
 }
 
 .logo {
-  width: 8dvw;
+  display: flex;
   text-align: center;
+  padding: 3dvh;
 }
 .logo img {
   width: 100%;
@@ -53,9 +64,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 40%;
+    width: 60%;
     height: 100dvh;
     left: 0;
+    background-color: var(--dark-color);
     transition: all 0.2s;
     z-index: 4;
   }
@@ -63,6 +75,7 @@
     display: none;
   }
   .sidebarBtn {
+    display: block;
     position: absolute;
     left: 4dvw;
     top: 2dvh;
@@ -71,7 +84,7 @@
     background-color: var(--dark-color);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 2rem;
-    z-index: 5;
+    z-index: 10;
   }
   .sidebar {
     color: var(--main-font-color);
@@ -80,7 +93,7 @@
     flex-direction: column;
   }
   .logo {
-    width: 15dvw;
+    
     margin-top: 15dvh;
   }
   .AppNav li a {

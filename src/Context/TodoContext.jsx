@@ -17,6 +17,7 @@ const initialState = {
   isLoading: true,
   tasks: getLocaleTasks(),
   finishedTasks: getFinishedTasks(),
+  isSidebarHidden: true,
 };
 
 function reducer(state, action) {
@@ -25,7 +26,7 @@ function reducer(state, action) {
       return { ...state, isLoading: true };
 
     case "loaded":
-      return { ...state, isLoading: false };
+      return { ...state, isLoading: false};
 
     case "formSubmitted":
       return {
@@ -50,6 +51,18 @@ function reducer(state, action) {
           (task) => task.id !== action.payload
         ),
       };
+
+    case "sidebarBtnEvent":
+      return {
+        ...state,
+        isSidebarHidden: state.isSidebarHidden ? false : true,
+      };
+
+    case "closeSidebar":
+      return {
+        ...state,
+        isSidebarHidden: !state.isSidebarHidden ? true : state.isSidebarHidden,
+      };
   }
 }
 
@@ -57,11 +70,10 @@ function reducer(state, action) {
 const todoContext = createContext();
 
 function TodoProvider({ children }) {
-  const [{ tasks, finishedTasks, isLoading }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [{ tasks, finishedTasks, isLoading, isSidebarHidden }, dispatch] =
+    useReducer(reducer, initialState);
 
+  console.log(isSidebarHidden);
   //set task to locale
   useEffect(() => {
     function setLocaleTask() {
@@ -83,7 +95,14 @@ function TodoProvider({ children }) {
   }
   return (
     <todoContext.Provider
-      value={{ dispatch, isLoading, tasks, finishedTasks, handleLoading }}
+      value={{
+        dispatch,
+        isLoading,
+        tasks,
+        finishedTasks,
+        isSidebarHidden,
+        handleLoading,
+      }}
     >
       {children}
     </todoContext.Provider>

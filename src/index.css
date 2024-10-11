@@ -73,3 +73,9 @@ a {
   background-position: center;
   background-size: cover;
 }
+
+@media screen and (max-width:450px) {
+  .taskBtn{
+    font-size: 6dvw;
+  }
+}

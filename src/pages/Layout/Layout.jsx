@@ -4,14 +4,21 @@ import styles from "./Layout.module.css";
 import { useTodo } from "../../Context/TodoContext";
 
 export default function Layout({ children }) {
-  const { isLoading, dispatch, handleLoading } = useTodo();
+  const { isLoading, dispatch, isSidebarHidden, handleLoading } = useTodo();
 
   useEffect(() => {
     dispatch({ type: "loading" });
   }, []);
 
   return (
-    <div className={styles.layout}>
+    <div
+      className={styles.layout}
+      onClick={(e) =>
+        e.target.className !== "_AppNav_1cr1e_5" &&
+        !isSidebarHidden &&
+        dispatch({ type: "closeSidebar" })
+      }
+    >
       {/* //responsive bg */}
       <picture>
         <source

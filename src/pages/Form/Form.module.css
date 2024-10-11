@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50dvh;
+  height: 70dvh;
   margin: 5dvh 10dvw;
   border-radius: 1rem;
   color: var(--light-color);
@@ -47,7 +47,7 @@
 }
 
 .form .desc {
-  height: 10dvh;
+  height: 18dvh;
   text-align: center;
   font-size: 2dvw;
   font-family: "Edu AU VIC WA NT Guides", cursive;
@@ -97,6 +97,7 @@
   .form{
     position: absolute;
     top: 10dvh;
+    justify-content: space-around;
   }
   .form .task{
     font-size: 6dvw;

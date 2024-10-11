@@ -43,7 +43,7 @@ export default function TasksFinished() {
           )}
           {finishedTasks.length === 0 && (
             <>
-              <h1 className={styles.finishedNum}>Start to finish your tasks</h1>
+              <h1 className={styles.finishedNum}>NO TASKS FINISHED</h1>
               <button className={`btn ${styles.startBtn}`}>
                 <Link to="/form">Add Task</Link>
               </button>

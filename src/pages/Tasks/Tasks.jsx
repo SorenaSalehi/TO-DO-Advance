@@ -43,7 +43,7 @@ export default function Tasks() {
           )}
           {tasksNum === 0 && (
             <>
-              <h1 className={styles.tasksNum}>Start to Add Task</h1>
+              <h1 className={styles.tasksNum}>NO TASK</h1>
               <button className={`btn ${styles.startBtn}`}>
                 <Link to="/form">Add Task</Link>
               </button>
