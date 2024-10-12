@@ -58,6 +58,7 @@ function reducer(state, action) {
         isSidebarHidden: state.isSidebarHidden ? false : true,
       };
 
+      //for clicking outside the sidebar
     case "closeSidebar":
       return {
         ...state,
@@ -73,7 +74,7 @@ function TodoProvider({ children }) {
   const [{ tasks, finishedTasks, isLoading, isSidebarHidden }, dispatch] =
     useReducer(reducer, initialState);
 
-  console.log(isSidebarHidden);
+ 
   //set task to locale
   useEffect(() => {
     function setLocaleTask() {
@@ -90,9 +91,11 @@ function TodoProvider({ children }) {
     setFinishedTask();
   }, [finishedTasks]);
 
+  //display the page content
   function handleLoading() {
     dispatch({ type: "loaded" });
   }
+
   return (
     <todoContext.Provider
       value={{

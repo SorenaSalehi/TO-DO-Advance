@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useTodo } from "../../Context/TodoContext";
 
 export default function DeleteTaskBtn({ id }) {
@@ -8,5 +9,9 @@ export default function DeleteTaskBtn({ id }) {
     dispatch({ type: "taskDeleted", payload: id });
   }
 
-  return <button className="taskBtn btnDelete" onClick={handleDelete}>&times;</button>;
+  return (
+    <button className="taskBtn btnDelete" onClick={handleDelete}>
+      &times;
+    </button>
+  );
 }

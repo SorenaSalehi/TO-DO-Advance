@@ -8,12 +8,15 @@ import AppNav from "../../component/AppNav/AppNav";
 export default function Form() {
   const [task, setTask] = useState("");
   const [desc, setDesc] = useState("");
-  const [date, setDate] = useState("08/18/1997");
+  const [date, setDate] = useState("");
+
+  //after submit jump to the tasks page
   const navigate = useNavigate();
   const { dispatch } = useTodo();
 
   const id = crypto.randomUUID();
 
+  //handling form submitted
   function handleSubmit(e) {
     e.preventDefault();
     dispatch({
@@ -22,6 +25,7 @@ export default function Form() {
     });
     navigate("/tasks");
   }
+
   return (
     <div className={styles.formPage}>
       <AppNav />
@@ -39,6 +43,7 @@ export default function Form() {
           value={task}
           onChange={(e) => setTask(e.target.value)}
         />
+
         <label htmlFor="desc">Description</label>
         <textarea
           id="desc"
@@ -47,6 +52,7 @@ export default function Form() {
           value={desc}
           onChange={(e) => setDesc(e.target.value)}
         ></textarea>
+        
         <label htmlFor="date">DATE</label>
         <input
           type="date"

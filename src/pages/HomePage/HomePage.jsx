@@ -1,12 +1,14 @@
 import React from "react";
-import AppNav from "../../component/AppNav/AppNav";
 import { useNavigate } from "react-router-dom";
+
+import AppNav from "../../component/AppNav/AppNav";
 import styles from "./HomePage.module.css";
+
 
 export default function HomePage() {
   const navigate = useNavigate();
 
-  //navigate to form
+  //navigate to form by clicking the start btn
   function handleStart() {
     navigate("form");
   }
@@ -20,6 +22,7 @@ export default function HomePage() {
         <button className={`btn`} onClick={handleStart}>
           GET STARTED
         </button>
+
         <footer>
           <p>
             © 2024{" "}
@@ -29,6 +32,7 @@ export default function HomePage() {
             . All rights reserved.
           </p>
         </footer>
+        
       </main>
     </>
   );

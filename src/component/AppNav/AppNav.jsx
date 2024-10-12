@@ -7,23 +7,25 @@ import { faPen } from "@fortawesome/free-solid-svg-icons/faPen";
 import { faList } from "@fortawesome/free-solid-svg-icons";
 import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 
+
 import styles from "./AppNav.module.css";
 import { useTodo } from "../../Context/TodoContext";
 
 export default function AppNav() {
-  // const [isHidden, setIsHidden] = useState(true);
-  const { isSidebarHidden, dispatch } = useTodo();
 
+  const { isSidebarHidden, dispatch } = useTodo();
   const [width, setWidth] = useState(window.innerWidth);
 
+  //for sidebar display
   const phoneScreen = width <= 450;
-  console.log(width, phoneScreen);
+
+  //set width on mount
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
 
+  //handling sidebar
   function handleSidebar() {
-    // setIsHidden((hidden) => !hidden);
     dispatch({ type: "sidebarBtnEvent" });
   }
 
@@ -32,7 +34,9 @@ export default function AppNav() {
       <button className={styles.sidebarBtn} onClick={handleSidebar}>
         <FontAwesomeIcon className={styles.sidebar} icon={faBars} />
       </button>
+
       <nav
+      //display the sidebar on screen
         className={
           !phoneScreen
             ? styles.AppNav
@@ -40,8 +44,10 @@ export default function AppNav() {
             ? styles.hidden
             : styles.AppNav
         }
+        //for closing sidebar b click outside
         onClick={() => dispatch({type:"closeSidebar"})}
       >
+        
         <div className={styles.logo}>
           <NavLink to="/">
             HOME

@@ -6,7 +6,9 @@ import AppNav from "../../component/AppNav/AppNav";
 import FinishedItem from "../FinishedItem/FinishedItem";
 import styles from "./TasksFinished.module.css";
 
+
 export default function TasksFinished() {
+
   const { finishedTasks, isLoading, dispatch, handleLoading } = useTodo();
 
   useEffect(() => {
@@ -18,6 +20,7 @@ export default function TasksFinished() {
       <AppNav />
       <div className={styles.finishedContainer}>
         <picture>
+          {/* //phone bg  */}
           <source
             className={styles.finishedBg}
             media="(max-width:450px)"
@@ -25,6 +28,7 @@ export default function TasksFinished() {
             alt="task-background"
             loading="lazy"
           />
+          {/* //desktop bg  */}
           <img
             className={styles.finishedBg}
             src={
@@ -35,12 +39,15 @@ export default function TasksFinished() {
             onLoad={handleLoading}
           />
         </picture>
+        {/* //task number */}
         <div className={styles.finished}>
           {finishedTasks.length !== 0 && (
             <h1 className={styles.finishedNum}>
               You finished <span>{finishedTasks.length}</span> tasks
             </h1>
           )}
+
+          {/* //in case no finished  */}
           {finishedTasks.length === 0 && (
             <>
               <h1 className={styles.finishedNum}>NO TASKS FINISHED</h1>
@@ -49,6 +56,8 @@ export default function TasksFinished() {
               </button>
             </>
           )}
+
+          {/* //finished list  */}
           <div className={styles.finishedList}>
             {finishedTasks.map((task) => (
               <FinishedItem task={task} key={task.id} />
