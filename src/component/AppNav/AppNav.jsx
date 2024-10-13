@@ -11,7 +11,7 @@ import styles from "./AppNav.module.css";
 import { useTodo } from "../../Context/TodoContext";
 
 export default function AppNav() {
-  const { isSidebarHidden, screenSize,phoneScreen, dispatch } = useTodo();
+  const { isSidebarHidden, phoneScreen, dispatch } = useTodo();
 
   //set width on mount
   useEffect(() => {
@@ -30,7 +30,6 @@ export default function AppNav() {
     () => <FontAwesomeIcon icon={faSquareCheck} />,
     []
   );
-
 
   //handling sidebar
   function handleSidebar(e) {

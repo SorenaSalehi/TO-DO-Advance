@@ -1,13 +1,12 @@
-import React, { useEffect } from "react";
+import React, { Children, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { useTodo } from "../../Context/TodoContext";
-import AppNav from "../../component/AppNav/AppNav";
 import TaskItem from "../TaskItem/TaskItem";
 import styles from "./Tasks.module.css";
 
 
-export default function Tasks() {
+export default  function Tasks({children}) {
 
   const { tasks, finishedTasks, isLoading, dispatch, handleLoading } =
     useTodo();
@@ -63,6 +62,7 @@ export default function Tasks() {
           <div className={styles.tasksList}>
             {tasks.length !== 0 &&
               tasks.map((task) => <TaskItem task={task} key={task.id} />)}
+              
           </div>
         </div>
       </div>

@@ -86,3 +86,18 @@
     transform: translateY(0);
   }
 }
+
+@media  screen and (max-width:450px) {
+  .task{
+    font-size: 6dvw;
+  }
+  .description{
+    font-size: 5dvw;
+  }
+  .date{
+    font-size: 4.5dvw;
+  }
+  .GoToFinished{
+    font-size: 3.5dvw;
+  }
+}
