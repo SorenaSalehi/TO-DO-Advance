@@ -1,14 +1,13 @@
 .finishedPage {
   height: 100dvh;
   backdrop-filter: blur(0.2rem);
-  padding-top: 15dvh;
 }
 
 .finishedContainer {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 0dvh 10dvw;
+  margin: 1dvh 10dvw;
   width: 80%;
   height: 80dvh;
   border-radius: 3rem;

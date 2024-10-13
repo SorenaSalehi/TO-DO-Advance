@@ -84,7 +84,7 @@
     background-color: var(--dark-color);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 2rem;
-    z-index: 100;
+    z-index: 10;
   }
   .sidebar {
     color: var(--main-font-color);
