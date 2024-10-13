@@ -1,5 +1,6 @@
 .formPage {
   height: 100dvh;
+  padding-top: 15dvh;
 }
 
 .form {
@@ -8,7 +9,7 @@
   justify-content: center;
   align-items: center;
   height: 70dvh;
-  margin: 5dvh 10dvw;
+  margin: 0dvh 10dvw;
   border-radius: 1rem;
   color: var(--light-color);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

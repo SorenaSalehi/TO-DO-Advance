@@ -2,11 +2,10 @@ import React, { useEffect } from "react";
 
 import styles from "./Layout.module.css";
 import { useTodo } from "../../Context/TodoContext";
-
-
+import AppNav from "../../component/AppNav/AppNav";
 
 export default function Layout({ children }) {
-  const { isLoading, dispatch, isSidebarHidden, handleLoading } = useTodo();
+  const { isLoading, dispatch, isSidebarHidden,phoneScreen, handleLoading } = useTodo();
 
   //on page mount
   useEffect(() => {
@@ -14,17 +13,20 @@ export default function Layout({ children }) {
   }, []);
 
 
+
   return (
     <div
       className={styles.layout}
       //for closing sidebar if it open
-      onClick={(e) =>
+      onClick={(e) => {
         e.target.className !== "_AppNav_1cr1e_5" &&
-        !isSidebarHidden &&
-        dispatch({ type: "closeSidebar" })
-      }
+          !isSidebarHidden && phoneScreen &&
+          dispatch({ type: "closeSidebar" });
+      }}
     >
-
+      <nav className={styles.nav}>
+        <AppNav />
+      </nav>
       {/* //responsive bg */}
       <picture>
         {/* //phone bg */}

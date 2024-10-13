@@ -18,9 +18,11 @@ export default function Tasks() {
 
   const tasksNum = tasks.length - finishedTasks.length;
 
+  
+
   return (
     <div className={styles.tasksPage}>
-      <AppNav />
+      {/* <AppNav /> */}
       <div className={styles.tasksContainer}>
         <picture>
           {/* //phone bg  */}

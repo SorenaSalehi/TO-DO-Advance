@@ -17,7 +17,7 @@ export default function TasksFinished() {
 
   return (
     <div className={styles.finishedPage}>
-      <AppNav />
+      {/* <AppNav /> */}
       <div className={styles.finishedContainer}>
         <picture>
           {/* //phone bg  */}

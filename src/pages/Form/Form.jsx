@@ -28,7 +28,7 @@ export default function Form() {
 
   return (
     <div className={styles.formPage}>
-      <AppNav />
+      {/* <AppNav /> */}
       <form className={styles.form} onSubmit={handleSubmit}>
         <h1 className={styles.header}>ARE YOU READY ? 🙂</h1>
 

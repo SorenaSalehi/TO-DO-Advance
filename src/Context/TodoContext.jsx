@@ -18,6 +18,7 @@ const initialState = {
   tasks: getLocaleTasks(),
   finishedTasks: getFinishedTasks(),
   isSidebarHidden: true,
+  ScreenSize:window.innerWidth
 };
 
 function reducer(state, action) {
@@ -64,6 +65,9 @@ function reducer(state, action) {
         ...state,
         isSidebarHidden: !state.isSidebarHidden ? true : state.isSidebarHidden,
       };
+
+      //for responsive style
+      case "screenChanged": return {...state , screenSize : action.payload}
   }
 }
 
@@ -71,7 +75,7 @@ function reducer(state, action) {
 const todoContext = createContext();
 
 function TodoProvider({ children }) {
-  const [{ tasks, finishedTasks, isLoading, isSidebarHidden }, dispatch] =
+  const [{ tasks, finishedTasks, isLoading, isSidebarHidden,screenSize }, dispatch] =
     useReducer(reducer, initialState);
 
  
@@ -96,6 +100,8 @@ function TodoProvider({ children }) {
     dispatch({ type: "loaded" });
   }
 
+  const phoneScreen= screenSize <= 450
+
   return (
     <todoContext.Provider
       value={{
@@ -104,6 +110,8 @@ function TodoProvider({ children }) {
         tasks,
         finishedTasks,
         isSidebarHidden,
+        screenSize,
+        phoneScreen,
         handleLoading,
       }}
     >
