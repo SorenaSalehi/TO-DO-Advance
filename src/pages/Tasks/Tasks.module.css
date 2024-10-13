@@ -1,14 +1,14 @@
 .tasksPage {
   height: 100dvh;
   backdrop-filter: blur(0.2rem);
-
+  padding-top: 15dvh;
 }
 
 .tasksContainer {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 1dvh 10dvw;
+  margin: 0dvh 10dvw;
   width: 80%;
   height: 80dvh;
   border-radius: 3rem;

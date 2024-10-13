@@ -11,14 +11,14 @@ import styles from "./AppNav.module.css";
 import { useTodo } from "../../Context/TodoContext";
 
 export default function AppNav() {
-  const { isSidebarHidden, dispatch } = useTodo();
-  const [width, setWidth] = useState(window.innerWidth);
+  const { isSidebarHidden, screenSize,phoneScreen, dispatch } = useTodo();
 
   //set width on mount
   useEffect(() => {
-    setWidth(window.innerWidth);
+    dispatch({ type: "screenChanged", payload: window.innerWidth });
   }, []);
 
+  //preventing icon re-render
   const barsIco = useMemo(
     () => <FontAwesomeIcon className={styles.sidebar} icon={faBars} />,
     []
@@ -31,12 +31,11 @@ export default function AppNav() {
     []
   );
 
-  //for sidebar display
-  const phoneScreen = width <= 450;
 
   //handling sidebar
-  function handleSidebar() {
+  function handleSidebar(e) {
     dispatch({ type: "sidebarBtnEvent" });
+    console.log(e.target);
   }
 
   return (
@@ -54,7 +53,7 @@ export default function AppNav() {
             ? styles.hidden
             : styles.AppNav
         }
-        //for closing sidebar b click outside
+        //for closing sidebar by click outside
         onClick={() => dispatch({ type: "closeSidebar" })}
       >
         <div className={styles.logo}>
