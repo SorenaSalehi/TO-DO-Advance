@@ -27,7 +27,7 @@ export default function App() {
             <Routes>
               <Route index element={<HomePage />} />
               <Route path="form" element={<Form />} />
-              <Route path="tasks" element={<Tasks />} />
+              <Route path="tasks" element={<Tasks/>} />
               <Route path="finished" element={<TasksFinished />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>

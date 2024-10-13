@@ -20,7 +20,7 @@ export default function Tasks() {
 
   return (
     <div className={styles.tasksPage}>
-      <AppNav />
+      {/* <AppNav /> */}
       <div className={styles.tasksContainer}>
         <picture>
           {/* //phone bg  */}

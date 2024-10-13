@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import styles from "./Layout.module.css";
 import { useTodo } from "../../Context/TodoContext";
+import AppNav from "../../component/AppNav/AppNav";
 
 
 
@@ -24,7 +25,10 @@ export default function Layout({ children }) {
         dispatch({ type: "closeSidebar" })
       }
     >
+      <nav className={styles.nav}>
 
+      <AppNav/>
+      </nav>
       {/* //responsive bg */}
       <picture>
         {/* //phone bg */}

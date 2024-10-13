@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <>
       <main className={styles.homePage}>
-        <AppNav />
+        {/* <AppNav /> */}
       
         <h1>TODO HOME</h1>
         <button className={`btn`} onClick={handleStart}>
