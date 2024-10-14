@@ -27,8 +27,7 @@
   
 }
 .description {
-  width: 100%;
-  text-align: left;
+  width: 90%;
  font-size: 2dvw;
 }
 .date {
@@ -89,8 +88,12 @@
 
 @media  screen and (max-width:450px) {
   
-
+  .container{
+    max-width: max-content;
+    
+  }
   .task{
+    width: auto;
     font-size: 6dvw;
   }
   .description{

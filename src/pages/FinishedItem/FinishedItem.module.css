@@ -36,6 +36,9 @@
 
   
   @media  screen and (max-width:450px) {
+    .container{
+      max-width: max-content;
+    }
     .task{
       font-size: 6dvw;
     }
