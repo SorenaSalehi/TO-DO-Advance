@@ -30,7 +30,6 @@ export default function Form() {
     <div className={styles.formPage}>
       {/* <AppNav /> */}
       <form className={styles.form} onSubmit={handleSubmit}>
-        <h1 className={styles.header}>ARE YOU READY ? 🙂</h1>
 
         <label htmlFor="task">TASK</label>
         <input

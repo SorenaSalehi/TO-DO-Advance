@@ -34,7 +34,7 @@
 .date {
   text-align: left;
   font-size: 1.3dvw;
-  width: 50%;
+  width: 100%;
   margin: 1rem 0;
   padding: 0.2rem;
 }
@@ -88,6 +88,8 @@
 }
 
 @media  screen and (max-width:450px) {
+  
+
   .task{
     font-size: 6dvw;
   }
@@ -95,7 +97,7 @@
     font-size: 5dvw;
   }
   .date{
-    font-size: 4.5dvw;
+    font-size: 4dvw;
   }
   .GoToFinished{
     font-size: 3.5dvw;

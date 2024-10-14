@@ -61,11 +61,12 @@
 
 .form .desc:focus {
   outline-color: var(--main-font-color);
+ 
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .desc::placeholder{
-  font-size: 2dvw;
+  font-size: 4dvw;
   color: var(--main-font-color);
 }
 
@@ -81,6 +82,7 @@
   font-family: "Edu AU VIC WA NT Guides", cursive;
   font-optical-sizing: auto;
   word-spacing: 0.2rem;
+  cursor: pointer;
 }
 .form .date:focus {
   outline-color: var(--main-font-color);
@@ -99,13 +101,32 @@
     position: absolute;
     top: 10dvh;
     justify-content: space-around;
+    width: 90dvw;
+    margin: auto 5%;
+  }
+  .form label{
+    font-size: 5dvw;
+    letter-spacing: 4dvw;
   }
   .form .task{
+    font-size: 6dvw;
+    width: 90%;
+
+  }
+  .task::placeholder{
     font-size: 6dvw;
   }
   .form .desc{
     font-size: 6dvw;
+    width: 90%;
   }
+  .date{
+    width: 50%;
+  }
+  .desc::placeholder{
+    font-size: 5dvw;
+    text-wrap:pretty;
+  } 
   .form button{
     width: 50%;
     font-size: 4dvw;
