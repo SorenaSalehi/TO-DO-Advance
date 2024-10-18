@@ -3,16 +3,16 @@
 .AppNav a {
   text-decoration: none;
   color: var(--main-font-color);
-  font-size: 2.5rem;
+  font-size: 2.5dvw;
   transition: all 0.8s;
 }
 .AppNav a:hover {
   font-size: 3rem;
 }
-.AppNav ul li a:active {
-  color: var(--main-font-color);
+.AppNav :global(.active){
+  color: var(--light-color);
+  font-size: larger;
 }
-
 .AppNav {
   display: flex;
   justify-content: space-between;
@@ -23,18 +23,18 @@
   backdrop-filter: blur(0.5rem);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   font-family: "Edu AU VIC WA NT Guides", cursive;
+  font-display: swap;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   z-index: 2;
 }
 
-
 .sidebarBtn {
   display: none;
 }
 
-.AppNav span{
+.AppNav span {
   margin: 0 2dvw;
 }
 
@@ -70,6 +70,10 @@
     background-color: var(--dark-color);
     transition: all 0.2s;
     z-index: 4;
+    
+  }
+  .AppNav a {
+    font-size: 6dvw;
   }
   .hidden {
     display: none;
@@ -79,13 +83,17 @@
     position: absolute;
     left: 4dvw;
     top: 2dvh;
+    font-size: 8dvw;
     border: none;
     padding: 3dvw;
     background-color: var(--dark-color);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 2rem;
     z-index: 100;
   }
+ 
   .sidebar {
     color: var(--main-font-color);
   }
@@ -93,7 +101,6 @@
     flex-direction: column;
   }
   .logo {
-    
     margin-top: 15dvh;
   }
   .AppNav li a {
